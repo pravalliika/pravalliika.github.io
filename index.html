@@ -114,7 +114,7 @@
     background: var(--accent);
   }
   h1 {
-    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -122,6 +122,7 @@
   }
   h1 .name-line { display: block; }
   h1 .accent-line {
+    font-size: clamp(1.3rem, 2.2vw, 1.9rem);
     display: block;
     background: linear-gradient(90deg, var(--accent), var(--accent2));
     -webkit-background-clip: text;
@@ -462,7 +463,7 @@
 
   /* Animations */
   .fade-up {
-    opacity: 0; transform: translateY(24px);
+    opacity: 1; transform: translateY(0);
     transition: opacity 0.6s, transform 0.6s;
   }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
@@ -510,7 +511,7 @@
         CI/CD · Monitoring · Security
       </p>
       <p class="hero-desc">
-        Senior Software Engineer at Capgemini with 3.5+ years designing
+        Senior Software Engineer designing
         production-grade infrastructure, automating deployments, and securing
         cloud-native pipelines across multi-cloud environments.
       </p>
@@ -530,7 +531,7 @@
         <div><span class="t-prompt">❯ </span><span class="t-cmd">kubectl get profile</span></div>
         <div class="t-out"><span class="t-key">name: </span><span class="t-val">Pravallika M</span></div>
         <div class="t-out"><span class="t-key">role: </span><span class="t-val">Senior DevOps Engineer</span></div>
-        <div class="t-out"><span class="t-key">exp: </span><span class="t-val">3.5+ years</span></div>
+        <div class="t-out"><span class="t-key">exp: </span><span class="t-val">Senior Engineer</span></div>
         <div class="t-out"><span class="t-key">cloud: </span><span class="t-val">[AWS, Azure, GCP]</span></div>
         <div class="t-out"><span class="t-key">k8s: </span><span class="t-val">EKS | AKS | GKE</span></div>
         <div class="t-out"><span class="t-key">iac: </span><span class="t-val">Terraform | Ansible</span></div>
@@ -547,8 +548,8 @@
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item fade-up">
-      <span class="stat-num">3.5+</span>
-      <span class="stat-label">YEARS EXP</span>
+      <span class="stat-num">5+</span>
+      <span class="stat-label">PROJECTS BUILT</span>
     </div>
     <div class="stat-item fade-up" style="transition-delay:0.1s">
       <span class="stat-num">3</span>
@@ -764,7 +765,7 @@
         <div class="exp-dot" style="border-color:var(--accent2); box-shadow: 0 0 12px rgba(124,92,252,0.4)"></div>
         <div class="exp-date">2020 — 2022</div>
         <div class="exp-title">DevOps Engineer</div>
-        <div class="exp-company">HTC GLOBAL SERVICES · Hyderabad, India</div>
+        <div class="exp-company">Hyderabad, India</div>
         <ul class="exp-points">
           <li>Built Jenkins pipelines for Java and Node.js apps with automated test and deploy stages</li>
           <li>Managed AWS infrastructure (EC2, S3, RDS, VPC, IAM) with 99.9% uptime SLA</li>
@@ -778,7 +779,7 @@
         <div class="exp-dot"></div>
         <div class="exp-date">2022 — PRESENT</div>
         <div class="exp-title">Senior Software Engineer — DevOps</div>
-        <div class="exp-company">CAPGEMINI · Hyderabad, India</div>
+        <div class="exp-company">Hyderabad, India</div>
         <ul class="exp-points">
           <li>Designed CI/CD pipelines with Jenkins &amp; GitHub Actions, reducing deployment time by 40%</li>
           <li>Provisioned cloud infrastructure on AWS, Azure &amp; GCP using Terraform IaC</li>
@@ -859,7 +860,7 @@
     el.addEventListener('mouseleave', () => { cursor.style.width = '8px'; cursor.style.height = '8px'; });
   });
 
-  // Scroll fade
+  // Scroll fade - gentle animation only, content always visible
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
